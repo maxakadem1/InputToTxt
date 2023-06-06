@@ -50,16 +50,23 @@ namespace InputToTxt
 
         private void button4_Click(object sender, EventArgs e) //stop logging
         {
-            if(startLogging == true)
+            if(isRunning == false)
             {
-                startLogging = false;
-                runOnce = true;
-                writeHeaders = true; //reset writeHeaders to true so that headers will be written to the next log when start logging is pressed again
+                MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            else
             {
-                MessageBox.Show("Program is not logging anything", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(startLogging == true)
+                {
+                    startLogging = false;
+                    runOnce = true;
+                    writeHeaders = true; //reset writeHeaders to true so that headers will be written to the next log when start logging is pressed again
+                }
+
+                else
+                {
+                    MessageBox.Show("Program is not logging anything", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -127,6 +134,14 @@ namespace InputToTxt
                         textBox5.Text = data[1].ToString("0.000");
                         textBox7.Text = data[2].ToString("0.000");
                         textBox9.Text = data[3].ToString("0.000");
+
+                        double channel1mAmp = (data[0]/0.249).ToString("0.000");
+                        double channel2mAmp = (data[1]/0.249).ToString("0.000");
+                        double channel4mAmp = (data[3]/0.249).ToString("0.000");
+
+                        textBox11.text = channel1mAmp;
+                        textBox12.text = channel2mAmp;
+                        textBox13.text = channel4mAmp;
 
                         double channel1MBar = ((data[0] / 249) * 1000 - 4) * 125;
                         double channel_O2 = ((data[1]/249)*1000 - 4) * 1.875;
