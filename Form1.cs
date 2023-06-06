@@ -13,6 +13,8 @@ namespace InputToTxt
     {
         private Sealevel.SeaMAX sm;
         private bool isRunning = false;
+        private bool startLogging = false;
+        private bool writeHeaders = true;
         
 
         public Form1()
@@ -24,9 +26,48 @@ namespace InputToTxt
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //start logging
+        {
+            if(startLogging == false)
+            {
+                startLogging = true;
+            }
+
+            else
+            {
+                MessageBox.Show("Program is already logging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e) //stop logging
+        {
+            if(startLogging == true)
+            {
+                startLogging = false;
+                writeHeaders = true; //reset writeHeaders to true so that headers will be written to the next log when start logging is pressed again
+            }
+
+            else
+            {
+                MessageBox.Show("Program is not logging anything", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e) //STOP button
         {
 
+            if (isRunning)
+            {
+                isRunning = false;
+            }
+            else
+            {
+                MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button3_Click (object sender, EventArgs e) //START button
+        {
             Sealevel.SeaMAX sm = new Sealevel.SeaMAX();
             isRunning = true;
 
@@ -61,10 +102,6 @@ namespace InputToTxt
                     DateTime currentDate = currentDateTime.Date;
                     TimeSpan currentTime = currentDateTime.TimeOfDay;
 
-                    string fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
-                    StreamWriter writer = new StreamWriter(fileName, true);
-                    writer.WriteLine("DATE, TIME, channel 1 (mBar), channel 2 (%O2), channel 3(%CO2), channel 4 (%O2), location, interval");
-
                     bool runOnce = true;
                     DateTimeOffset now = DateTimeOffset.UtcNow;
                     long prevTimeMills = now.ToUnixTimeMilliseconds();
@@ -94,12 +131,22 @@ namespace InputToTxt
 
                         now = DateTimeOffset.UtcNow;
                         long newTimeMills = now.ToUnixTimeMilliseconds();
-                        if (runOnce || (newTimeMills - prevTimeMills) >= int.Parse(comboBox2.Text)*1000)
+                        if (startLogging == true && (runOnce || (newTimeMills - prevTimeMills) >= int.Parse(comboBox2.Text)*1000))
                         {
+                            if(writeHeaders == true)
+                            {
+                                string fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
+                                StreamWriter writer = new StreamWriter(fileName, true);
+                                writer.WriteLine("DATE, TIME, channel 1 (mBar), channel 2 (%O2), channel 3(%CO2), channel 4 (%O2), location, interval");
+
+                                writeHeaders = false;
+                            }
+                            
                             runOnce = false;
                             prevTimeMills = newTimeMills;
                             WriteDataToFile(writer, fileName, currentDateTime, data, comboBox1.Text, comboBox2.Text);
                         }
+
                         currentDateTime = DateTime.Now;
                     }
 
@@ -112,25 +159,6 @@ namespace InputToTxt
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private static void TimerElapsed(object sender, ElapsedEventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            if (isRunning)
-            {
-                isRunning = false;
-            }
-            else
-            {
-                MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
 
         }
 
