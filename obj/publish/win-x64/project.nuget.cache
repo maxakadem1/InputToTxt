@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BZHcXMw8olQJjWo2Z2qT9a54nVVrC3Pm5mlMnkPUvcRTXjs9R1mKdoBY3vfnjfm8Dgwe1InjU4pN2RiARw2+bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abdul\\Desktop\\Work\\InputToText\\InputToTxt\\InputToTxt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abdul\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.16\\microsoft.netcore.app.runtime.win-x64.6.0.16.nupkg.sha512",
+    "C:\\Users\\abdul\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.16\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.16.nupkg.sha512",
+    "C:\\Users\\abdul\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.16\\microsoft.aspnetcore.app.runtime.win-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

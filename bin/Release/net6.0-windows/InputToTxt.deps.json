@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "InputToTxt/1.0.0": {
+        "dependencies": {
+          "SeaMAX Dot Net": "1.6.0.0"
+        },
+        "runtime": {
+          "InputToTxt.dll": {}
+        }
+      },
+      "SeaMAX Dot Net/1.6.0.0": {
+        "runtime": {
+          "SeaMAX Dot Net.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InputToTxt/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SeaMAX Dot Net/1.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,9 @@
+C:\Users\abdul\Desktop\Work\InputToTxt.pdb
+C:\Users\abdul\Desktop\Work\SeaMAX.dll
+C:\Users\abdul\Desktop\Work\D3DCompiler_47_cor3.dll
+C:\Users\abdul\Desktop\Work\PenImc_cor3.dll
+C:\Users\abdul\Desktop\Work\PresentationNative_cor3.dll
+C:\Users\abdul\Desktop\Work\vcruntime140_cor3.dll
+C:\Users\abdul\Desktop\Work\wpfgfx_cor3.dll
+C:\Users\abdul\Desktop\Work\SeaMAX Dot Net.xml
+C:\Users\abdul\Desktop\Work\InputToTxt.exe
