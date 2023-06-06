@@ -37,6 +37,13 @@ namespace InputToTxt
                 if (textBox10.Text != "")
                 {
                     returnValue = sm.SM_Open(textBox10.Text);
+
+                    if (returnValue < 0)
+                    {
+                        // Error opening entered COM
+                        MessageBox.Show("Error opening " + textBox10.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 else
                 {
@@ -44,13 +51,6 @@ namespace InputToTxt
                 }
 
                 System.Diagnostics.Debug.WriteLine("SM_Open return value: " + returnValue);  // Print to debug output
-
-                if (returnValue < 0)
-                {
-                    // Error opening COM6
-                    MessageBox.Show("Error opening COM6", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
 
                 if (sm.IsSeaMAXOpen)
                 {
@@ -101,9 +101,6 @@ namespace InputToTxt
                             WriteDataToFile(writer, fileName, currentDateTime, data, comboBox1.Text, comboBox2.Text);
                         }
                         currentDateTime = DateTime.Now;
-
-
-
                     }
 
                     writer.Close();
