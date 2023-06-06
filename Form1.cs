@@ -15,6 +15,7 @@ namespace InputToTxt
         private bool isRunning = false;
         private bool startLogging = false;
         private bool writeHeaders = true;
+        private bool runOnce = true;
         
 
         public Form1()
@@ -52,6 +53,7 @@ namespace InputToTxt
             if(startLogging == true)
             {
                 startLogging = false;
+                runOnce = true;
                 writeHeaders = true; //reset writeHeaders to true so that headers will be written to the next log when start logging is pressed again
             }
 
@@ -109,8 +111,7 @@ namespace InputToTxt
                     DateTime currentDateTime = DateTime.Now;
                     DateTime currentDate = currentDateTime.Date;
                     TimeSpan currentTime = currentDateTime.TimeOfDay;
-
-                    bool runOnce = true;
+                    
                     DateTimeOffset now = DateTimeOffset.UtcNow;
                     long prevTimeMills = now.ToUnixTimeMilliseconds();
 
@@ -147,7 +148,7 @@ namespace InputToTxt
                             if(writeHeaders == true)
                             {
                                 writer.Close(); //close the previous writer
-                                
+
                                 fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
                                 writer = new StreamWriter(fileName, true);
                                 writer.WriteLine("DATE, TIME, channel 1 (mBar), channel 2 (%O2), channel 3(%CO2), channel 4 (%O2), location, interval");
@@ -161,6 +162,7 @@ namespace InputToTxt
                         }
 
                         currentDateTime = DateTime.Now;
+                        currentTime = currentDateTime.TimeOfDay;
                     }
 
                     writer.Close();
