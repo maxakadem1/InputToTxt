@@ -28,15 +28,23 @@ namespace InputToTxt
 
         private void button1_Click(object sender, EventArgs e) //start logging
         {
-            if(startLogging == false)
+            if(isRunning == false)
             {
-                startLogging = true;
+                MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             else
             {
-                MessageBox.Show("Program is already logging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(startLogging == false)
+                    {
+                        startLogging = true;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Program is already logging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
             }
+            
         }
 
         private void button4_Click(object sender, EventArgs e) //stop logging
@@ -106,6 +114,9 @@ namespace InputToTxt
                     DateTimeOffset now = DateTimeOffset.UtcNow;
                     long prevTimeMills = now.ToUnixTimeMilliseconds();
 
+                    string fileName = "Error_LOG_something_is_wrong.txt";
+                    StreamWriter writer = new StreamWriter(fileName, true);
+
                     while (isRunning)
                     {
                         textBox1.Text = currentDateTime.ToString();
@@ -135,8 +146,10 @@ namespace InputToTxt
                         {
                             if(writeHeaders == true)
                             {
-                                string fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
-                                StreamWriter writer = new StreamWriter(fileName, true);
+                                writer.Close(); //close the previous writer
+                                
+                                fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
+                                writer = new StreamWriter(fileName, true);
                                 writer.WriteLine("DATE, TIME, channel 1 (mBar), channel 2 (%O2), channel 3(%CO2), channel 4 (%O2), location, interval");
 
                                 writeHeaders = false;
