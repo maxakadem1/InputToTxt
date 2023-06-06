@@ -11,7 +11,6 @@ namespace InputToTxt
 {
     public partial class Form1 : Form
     {
-        private static System.Timers.Timer timer;
         private Sealevel.SeaMAX sm;
         private bool isRunning = false;
         
@@ -66,13 +65,6 @@ namespace InputToTxt
                     StreamWriter writer = new StreamWriter(fileName, true);
                     writer.WriteLine("DATE, TIME, channel 1 (mBar), channel 2 (%O2), channel 3(%CO2), channel 4 (%O2), location, interval");
 
-                    // Create a timer with a 5-second interval
-                    //timer = new System.Timers.Timer(int.Parse(comboBox1.Text) * 1000);
-                    //timer.Elapsed += TimerElapsed;
-                    //timer.AutoReset = true; // Set to true to run repeatedly
-
-                    // Start the timer
-                    //timer.Start();
                     bool runOnce = true;
                     DateTimeOffset now = DateTimeOffset.UtcNow;
                     long prevTimeMills = now.ToUnixTimeMilliseconds();
@@ -82,20 +74,20 @@ namespace InputToTxt
                         textBox1.Text = currentDateTime.ToString();
 
                         double[] data = ReadDataFromDevice(sm, 4);
-                        textBox2.Text = data[0].ToString("0.0");
-                        textBox5.Text = data[1].ToString("0.00");
-                        textBox7.Text = data[2].ToString("0.00");
-                        textBox9.Text = data[3].ToString("0.00");
+                        textBox2.Text = data[0].ToString("0.000");
+                        textBox5.Text = data[1].ToString("0.000");
+                        textBox7.Text = data[2].ToString("0.000");
+                        textBox9.Text = data[3].ToString("0.000");
 
                         double channel1MBar = ((data[0] / 249) * 1000 - 4) * 125;
                         double channel_O2 = ((data[1]/249)*1000 - 4) * 1.875;
-                        double channel3_CO2 = ((data[2] / 249) * 1000 - 4) * 1.875;
-                        double channel4_O2 = data[3] * 5;
+                        double channel3_CO2 = data[2] * 5;
+                        double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.875;
 
-                        textBox3.Text = channel1MBar.ToString("0.0");
-                        textBox4.Text = channel_O2.ToString("0.00");
-                        textBox6.Text = channel3_CO2.ToString("0.00");
-                        textBox8.Text = channel4_O2.ToString("0.00");
+                        textBox3.Text = channel1MBar.ToString("0.000");
+                        textBox4.Text = channel_O2.ToString("0.000");
+                        textBox6.Text = channel3_CO2.ToString("0.000");
+                        textBox8.Text = channel4_O2.ToString("0.000");
 
                         // Allow the UI to refresh
                         Application.DoEvents();
@@ -163,6 +155,7 @@ namespace InputToTxt
             SeaMAX.ChannelRange[] ranges = new SeaMAX.ChannelRange[numInputs];
             byte[] byteValues = new byte[2 * numInputs];
 
+            //TODO Hopefully someone would be able to figure this out
             //// Prepare the analog configuration
             //int analogInputNumber = 4; // Replace with the actual number of analog inputs
             //AnalogConfig[] analogConfigs = new AnalogConfig[analogInputNumber];
@@ -243,7 +236,7 @@ namespace InputToTxt
             DateTime currentDate = dataTime.Date;
             TimeSpan currentTime = dataTime.TimeOfDay;
 
-            string[] formattedData = Array.ConvertAll(data, d => d.ToString("0.00"));
+            string[] formattedData = Array.ConvertAll(data, d => d.ToString("0.000"));
 
             string joinedValues = string.Join(",", formattedData);
             string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues, location, interval });
