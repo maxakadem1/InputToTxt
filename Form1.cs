@@ -16,7 +16,7 @@ namespace InputToTxt
         private bool startLogging = false;
         private bool writeHeaders = true;
         private bool runOnce = true;
-        
+
 
         public Form1()
         {
@@ -29,23 +29,23 @@ namespace InputToTxt
 
         private void button1_Click(object sender, EventArgs e) //start logging
         {
-            if(isRunning == false)
+            if (isRunning == false)
             {
                 MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                    if(startLogging == false)
-                    {
-                        startLogging = true;
-                    }
+                if (startLogging == false)
+                {
+                    startLogging = true;
+                }
 
-                    else
-                    {
-                        MessageBox.Show("Program is already logging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                else
+                {
+                    MessageBox.Show("Program is already logging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e) //stop logging
@@ -83,7 +83,7 @@ namespace InputToTxt
             }
         }
 
-        private void button3_Click (object sender, EventArgs e) //START button
+        private void button3_Click(object sender, EventArgs e) //START button
         {
             Sealevel.SeaMAX sm = new Sealevel.SeaMAX();
             isRunning = true;
@@ -112,13 +112,13 @@ namespace InputToTxt
 
                 if (sm.IsSeaMAXOpen)
                 {
-                        
+
                     System.Diagnostics.Debug.WriteLine("Reading File From Device");  // Print to debug output
 
                     DateTime currentDateTime = DateTime.Now;
                     DateTime currentDate = currentDateTime.Date;
                     TimeSpan currentTime = currentDateTime.TimeOfDay;
-                    
+
                     DateTimeOffset now = DateTimeOffset.UtcNow;
                     long prevTimeMills = now.ToUnixTimeMilliseconds();
 
@@ -144,7 +144,7 @@ namespace InputToTxt
                         textBox13.text = channel4mAmp;
 
                         double channel1MBar = ((data[0] / 249) * 1000 - 4) * 125;
-                        double channel_O2 = ((data[1]/249)*1000 - 4) * 1.875;
+                        double channel_O2 = ((data[1] / 249) * 1000 - 4) * 1.875;
                         double channel3_CO2 = data[2] * 5;
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.875;
 
@@ -158,9 +158,9 @@ namespace InputToTxt
 
                         now = DateTimeOffset.UtcNow;
                         long newTimeMills = now.ToUnixTimeMilliseconds();
-                        if (startLogging == true && (runOnce || (newTimeMills - prevTimeMills) >= int.Parse(comboBox2.Text)*1000))
+                        if (startLogging == true && (runOnce || (newTimeMills - prevTimeMills) >= int.Parse(comboBox2.Text) * 1000))
                         {
-                            if(writeHeaders == true)
+                            if (writeHeaders == true)
                             {
                                 writer.Close(); //close the previous writer
 
@@ -170,7 +170,7 @@ namespace InputToTxt
 
                                 writeHeaders = false;
                             }
-                            
+
                             runOnce = false;
                             prevTimeMills = newTimeMills;
                             WriteDataToFile(writer, fileName, currentDateTime, data, comboBox1.Text, comboBox2.Text);
@@ -197,7 +197,7 @@ namespace InputToTxt
         {
             base.OnFormClosing(e);
 
-            if (sm.IsSeaMAXOpen)
+            if (sm != null && sm.IsSeaMAXOpen)
             {
                 sm.SM_Close();
             }
@@ -246,7 +246,7 @@ namespace InputToTxt
             //    MessageBox.Show("Error setting analog configuration" + resultAnalogConf, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
 
-            
+
             // Setup the ranges
             int resultRanges = sm.SM_GetAnalogInputRanges(ranges);
 
@@ -333,6 +333,39 @@ namespace InputToTxt
         private void label16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
         }
     }
 }
