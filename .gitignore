@@ -1,0 +1,67 @@
+# Visual Studio temporary files, build results, and user-specific settings
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.sln.docstates
+
+# NuGet packages
+packages/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio cache and settings
+*.vsconfig
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.sdf
+*.opensdf
+*.suo
+*.sln.docstates
+*.bak
+*.cache
+*.resharper
+*.resharper.user
+*.userosscache
+*.sln.docstates
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.[Rr]e[Ss]harper.user
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+
+# Click-Once publish
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
