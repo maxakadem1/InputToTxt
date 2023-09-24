@@ -268,7 +268,7 @@ namespace InputToTxt
                             {
                                 writer.Close(); //close the previous writer
 
-                                fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
+                                fileName = "./NODEDA_LOGS/LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
                                 writer = new StreamWriter(fileName, true);
                                 writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%CO2), channel 4 (%O2), interval");
 
