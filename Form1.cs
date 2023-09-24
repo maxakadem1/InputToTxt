@@ -23,11 +23,8 @@ namespace InputToTxt
         {
             InitializeComponent();
 
-
-            this.Text = "NODEDA";
-            comboBox2.SelectedIndex = 0;
-            comboBox3.SelectedIndex = 0;
-
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 1;
 
         }
 
@@ -99,13 +96,13 @@ namespace InputToTxt
 
                 if (comboBox4.Text != "")
                 {
-                    returnValue = sm.SM_Open("COM" + comboBox4.Text);
+                   returnValue = sm.SM_Open("COM" + comboBox4.Text);
 
-                    if (returnValue < 0)
-                    {
-                        // Error opening entered COM
-                        MessageBox.Show("Error opening " + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                if (returnValue < 0)
+                {
+                // Error opening entered COM
+                      MessageBox.Show("Error opening " + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                       return;
                     }
                 }
 
@@ -116,16 +113,8 @@ namespace InputToTxt
 
                 System.Diagnostics.Debug.WriteLine("SM_Open return value: " + returnValue);  // Print to debug output
 
-                if (comboBox1.SelectedIndex == -1)
-                {
-                    MessageBox.Show("You must select a value in MANIFOLD LOCATION.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
                 if (sm.IsSeaMAXOpen)
                 {
-
-
 
                     System.Diagnostics.Debug.WriteLine("Reading File From Device");  // Print to debug output
 
@@ -165,7 +154,7 @@ namespace InputToTxt
                         string strChannel5_O2 = channel5_O2.ToString("0.000");
 
                         long newTimeMills = now.ToUnixTimeMilliseconds();
-                        if (runDisplayRefreshOnce || (newTimeMills - prevDisplayRefreshTimeMills) >= displayRefresh * 1000))
+                        if (runDisplayRefreshOnce || (newTimeMills - prevDisplayRefreshTimeMills) >= displayRefresh * 1000)
                         {
                             //First row in UI (5 channels that have Volt values)
                             textBox2.Text = data[0].ToString("0.000"); //channel # 1 
@@ -194,7 +183,7 @@ namespace InputToTxt
                             prevDisplayRefreshTimeMills = newTimeMills;
                         }
 
-                        now = DateTimeOffset.UtcNow
+                        now = DateTimeOffset.UtcNow;
                         if (startLogging == true && (runRecordLogOnce || (newTimeMills - prevRecordLogTimeMills) >= int.Parse(comboBox2.Text) * 1000))
                         {
                             if (writeHeaders == true)
@@ -333,7 +322,7 @@ namespace InputToTxt
 
 
             string joinedValues = string.Join(",", data);
-            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues });
+            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues});
 
             writer.WriteLine(dataToWrite);
 
