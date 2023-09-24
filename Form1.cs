@@ -23,8 +23,10 @@ namespace InputToTxt
         {
             InitializeComponent();
 
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 1;
+
+            this.Text = "NODEDA";
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
 
             this.Size = new Size(1291, 812);
 
@@ -32,6 +34,13 @@ namespace InputToTxt
 
         private void button1_Click(object sender, EventArgs e) //start logging
         {
+
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("You must select a value in MANIFOLD LOCATION.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (isRunning == false)
             {
                 MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -114,6 +123,12 @@ namespace InputToTxt
                 }
 
                 System.Diagnostics.Debug.WriteLine("SM_Open return value: " + returnValue);  // Print to debug output
+
+                if (comboBox1.SelectedIndex == -1)
+                {
+                    MessageBox.Show("You must select a value in MANIFOLD LOCATION.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (sm.IsSeaMAXOpen)
                 {
