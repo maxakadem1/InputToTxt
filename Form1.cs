@@ -160,14 +160,14 @@ namespace InputToTxt
             {
                 int returnValue = sm.SM_Open("");
 
-                if (comboBox4.Text != "")
+                if (comboBox4.SelectedItem.ToString() != "")
                 {
-                    returnValue = sm.SM_Open("COM" + comboBox4.Text);
+                    returnValue = sm.SM_Open("COM" + comboBox4.SelectedItem.ToString());
 
                     if (returnValue < 0)
                     {
                         // Error opening entered COM
-                        MessageBox.Show("Error opening COM" + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error opening COM" + comboBox4.SelectedItem.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -213,7 +213,7 @@ namespace InputToTxt
                     while (isRunning)
                     {
                         textBox1.Text = currentDateTime.ToString();
-                        int displayRefresh = int.Parse(comboBox3.Text);
+                        int displayRefresh = (int) comboBox3.SelectedItem;
 
                         double[] data = ReadDataFromDevice(sm, 5); // 5 channels to read
 
@@ -265,7 +265,7 @@ namespace InputToTxt
                         }
 
                         now = DateTimeOffset.UtcNow;
-                        if (startLogging == true && (runRecordLogOnce || (newTimeMills - prevRecordLogTimeMills) >= int.Parse(comboBox2.Text) * 1000))
+                        if (startLogging == true && (runRecordLogOnce || (newTimeMills - prevRecordLogTimeMills) >= (int) comboBox2.SelectedItem * 1000))
                         {
                             if (writeHeaders == true)
                             {
@@ -288,8 +288,8 @@ namespace InputToTxt
 
                             runRecordLogOnce = false;
                             prevRecordLogTimeMills = newTimeMills;
-                            string manifoldLocation = comboBox1.Text;
-                            string interval = comboBox2.Text;
+                            string manifoldLocation = comboBox1.SelectedItem.ToString();
+                            string interval = comboBox2.SelectedItem.ToString();
                             string[] dataToWrite = { strChannel1WaterColumn, manifoldLocation, strChannel2_ppmCO2, strChannel3_CO2, strChannel4_O2, strChannel5_O2, interval }; //data and time will be prepended so just put the values that go after date and time here
                             WriteDataToFile(writer, currentDateTime, dataToWrite);
                         }
