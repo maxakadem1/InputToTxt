@@ -92,22 +92,21 @@ namespace InputToTxt
             {
                 int returnValue = sm.SM_Open("");
 
-                if (comboBox4.Text != "")
-                {
-                   returnValue = sm.SM_Open("COM" + comboBox4.Text);
+                //if (textBox10.Text != "")
+                //{
+                //   returnValue = sm.SM_Open(textBox10.Text);
 
-                if (returnValue < 0)
-                {
+                //if (returnValue < 0)
+                // {
                 // Error opening entered COM
-                      MessageBox.Show("Error opening " + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                       return;
-                    }
-                }
-
-                else
-                {
-                    MessageBox.Show("Please include COM. ex: (COM6)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //      MessageBox.Show("Error opening " + textBox10.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //       return;
+                //    }
+                // }
+                //  else
+                //  {
+                //     MessageBox.Show("Please include COM. ex: (COM6)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //  }
 
                 System.Diagnostics.Debug.WriteLine("SM_Open return value: " + returnValue);  // Print to debug output
 
@@ -130,34 +129,29 @@ namespace InputToTxt
                     {
                         textBox1.Text = currentDateTime.ToString();
 
-                        double[] data = ReadDataFromDevice(sm, 5); // 5 channels to read
-                        textBox2.Text = data[0].ToString("0.000"); //channel # 1 
-                        textBox5.Text = data[1].ToString("0.000"); //channel # 2
-                        textBox7.Text = data[2].ToString("0.000"); //channel # 3
-                        textBox9.Text = data[3].ToString("0.000"); //channel # 4
-                        textBox16.Text = data[4].ToString("0.000"); // channel # 5
+                        double[] data = ReadDataFromDevice(sm, 4);
+                        textBox2.Text = data[0].ToString("0.000");
+                        textBox5.Text = data[1].ToString("0.000");
+                        textBox7.Text = data[2].ToString("0.000");
+                        textBox9.Text = data[3].ToString("0.000");
 
                         String channel1mAmp = (data[0] / 0.249).ToString("0.000");
-                        String channel3mAmp = (data[2] / 0.249).ToString("0.000");
+                        String channel2mAmp = (data[1] / 0.249).ToString("0.000");
                         String channel4mAmp = (data[3] / 0.249).ToString("0.000");
-                        String channel5mAmp = (data[4] / 0.249).ToString("0.000");
 
                         textBox11.Text = channel1mAmp;
-                        textBox12.Text = channel3mAmp;
+                        textBox12.Text = channel2mAmp;
                         textBox13.Text = channel4mAmp;
-                        textBox14.Text = channel5mAmp;
 
-                        double channel1WaterColumn = (data[0] - 12) * 0.125;      // was mBar, needs a formula ((data[0] / 249) * 1000 - 4) * 125;
-                        double channel2_ppmCO2 = data[1] * 2000;
+                        double channel1MBar = ((data[0] / 249) * 1000 - 4) * 125;
+                        double channel_O2 = ((data[1] / 249) * 1000 - 4) * 1.5625;
                         double channel3_CO2 = data[2] * 5;
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
-                        double channel5_O2 = ((data[4] / 249) * 1000 - 4) * 1.5625;
 
-                        textBox3.Text = channel1WaterColumn.ToString("0.000");
-                        textBox4.Text = channel2_ppmCO2.ToString("0.000");
+                        textBox3.Text = channel1MBar.ToString("0.000");
+                        textBox4.Text = channel_O2.ToString("0.000");
                         textBox6.Text = channel3_CO2.ToString("0.000");
                         textBox8.Text = channel4_O2.ToString("0.000");
-                        textBox15.Text = channel5_O2.ToString("0.000");
 
                         // Allow the UI to refresh
                         Application.DoEvents();
@@ -385,6 +379,11 @@ namespace InputToTxt
         }
 
         private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
