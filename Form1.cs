@@ -22,8 +22,9 @@ namespace InputToTxt
         {
             InitializeComponent();
 
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 1;
+            
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
 
         }
 
@@ -44,6 +45,12 @@ namespace InputToTxt
                 {
                     MessageBox.Show("Program is already logging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("You must select a value in comboBox1.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
         }
