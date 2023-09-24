@@ -94,7 +94,7 @@ namespace InputToTxt
 
                 if (comboBox4.Text != "")
                 {
-                   returnValue = sm.SM_Open(comboBox4.Text);
+                   returnValue = sm.SM_Open("COM" + comboBox4.Text);
 
                 if (returnValue < 0)
                 {
