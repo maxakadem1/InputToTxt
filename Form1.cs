@@ -50,13 +50,13 @@ namespace InputToTxt
 
         private void button4_Click(object sender, EventArgs e) //stop logging
         {
-            if(isRunning == false)
+            if (isRunning == false)
             {
                 MessageBox.Show("Program is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             {
-                if(startLogging == true)
+                if (startLogging == true)
                 {
                     startLogging = false;
                     runOnce = true;
@@ -92,21 +92,21 @@ namespace InputToTxt
             {
                 int returnValue = sm.SM_Open("");
 
-                if (textBox10.Text != "")
-                {
-                    returnValue = sm.SM_Open(textBox10.Text);
+                //if (textBox10.Text != "")
+                //{
+                //   returnValue = sm.SM_Open(textBox10.Text);
 
-                    if (returnValue < 0)
-                    {
-                        // Error opening entered COM
-                        MessageBox.Show("Error opening " + textBox10.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please include COM. ex: (COM6)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //if (returnValue < 0)
+                // {
+                // Error opening entered COM
+                //      MessageBox.Show("Error opening " + textBox10.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //       return;
+                //    }
+                // }
+                //  else
+                //  {
+                //     MessageBox.Show("Please include COM. ex: (COM6)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //  }
 
                 System.Diagnostics.Debug.WriteLine("SM_Open return value: " + returnValue);  // Print to debug output
 
@@ -135,9 +135,9 @@ namespace InputToTxt
                         textBox7.Text = data[2].ToString("0.000");
                         textBox9.Text = data[3].ToString("0.000");
 
-                        String channel1mAmp = (data[0]/0.249).ToString("0.000");
-                        String channel2mAmp = (data[1]/0.249).ToString("0.000");
-                        String channel4mAmp = (data[3]/0.249).ToString("0.000");
+                        String channel1mAmp = (data[0] / 0.249).ToString("0.000");
+                        String channel2mAmp = (data[1] / 0.249).ToString("0.000");
+                        String channel4mAmp = (data[3] / 0.249).ToString("0.000");
 
                         textBox11.Text = channel1mAmp;
                         textBox12.Text = channel2mAmp;
@@ -366,6 +366,21 @@ namespace InputToTxt
 
         private void label8_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
