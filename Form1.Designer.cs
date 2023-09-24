@@ -829,7 +829,7 @@
             label36.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label36.Location = new Point(32, 92);
             label36.Name = "label36";
-            label36.Size = new Size(563, 224);
+            label36.Size = new Size(862, 224);
             label36.TabIndex = 66;
             label36.Text = resources.GetString("label36.Text");
             label36.Click += label36_Click;
