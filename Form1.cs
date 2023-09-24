@@ -137,6 +137,7 @@ namespace InputToTxt
 
             if (isRunning)
             {
+                startLogging = false;
                 isRunning = false;
                 runDisplayRefreshOnce = true; //restore display refresh bool, so that if start is pressed again the channels can refresh
             }
