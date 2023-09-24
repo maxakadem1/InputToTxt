@@ -117,4 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Tool instuctions:
+
+• Choose MANIFOLD LOCATION
+• Choose COM Port
+• Choose DISPLAY REFRESH for refresh rate of information
+• Press START
+
+Saving infomation into file:
+
+• Choose RECORDING INTERVAL for intervals of data recording into file
+• Press START LOGGING after START
+• To stop logging information, press STOP LOGGING
+• Information will be saved in the NODEDA_LOGS directory as the file executable with current date and time in the same directory as the executable
+
+</value>
+  </data>
 </root>
