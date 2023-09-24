@@ -224,13 +224,13 @@ namespace InputToTxt
 
                         double channel1WaterColumn = ((data[0] / 0.249) - 12) * 0.125;
                         double channel2_ppmCO2 = data[1] * 2000;
-                        double channel3_CO2 = data[2] * 5;
+                        double channel3_O2 = data[2] * 5;
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
                         double channel5_O2 = ((data[4] / 249) * 1000 - 4) * 1.5625;
 
                         string strChannel1WaterColumn = channel1WaterColumn.ToString("0.000");
                         string strChannel2_ppmCO2 = channel1WaterColumn.ToString("0.000");
-                        string strChannel3_CO2 = channel3_CO2.ToString("0.000");
+                        string strChannel3_O2 = channel3_O2.ToString("0.000");
                         string strChannel4_O2 = channel4_O2.ToString("0.000");
                         string strChannel5_O2 = channel5_O2.ToString("0.000");
 
@@ -253,7 +253,7 @@ namespace InputToTxt
                             //Third row of values ("WC, pppmCO2, %CO2, %O2, %O2)
                             textBox3.Text = strChannel1WaterColumn;
                             textBox4.Text = strChannel2_ppmCO2;
-                            textBox6.Text = strChannel3_CO2;
+                            textBox6.Text = strChannel3_O2;
                             textBox8.Text = strChannel4_O2;
                             textBox15.Text = strChannel5_O2;
 
