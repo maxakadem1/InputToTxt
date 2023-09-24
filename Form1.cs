@@ -28,9 +28,22 @@ namespace InputToTxt
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
 
+            // Set a fixed size and disable resizing
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Size = new Size(1291, 812);
+
+            // Ensure the form's WindowState is set to Normal
             this.WindowState = FormWindowState.Normal;
+
+            // Set the form's AutoScaleMode property to None
             this.AutoScaleMode = AutoScaleMode.None;
+
+            // Explicitly set the StartPosition to Manual
+            this.StartPosition = FormStartPosition.Manual;
+
+            // Explicitly set the location to (0,0)
+            this.Location = new Point(0, 0);
 
         }
 
