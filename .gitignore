@@ -65,3 +65,13 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
+.vs/InputToTxt/v17/.suo
+Backup/InputToTxt.sln
+obj/InputToTxt.csproj.nuget.dgspec.json
+obj/InputToTxt.csproj.nuget.g.props
+obj/project.assets.json
+obj/project.nuget.cache
+obj/Release/net6.0-windows/InputToTxt.assets.cache
+obj/Release/net6.0-windows/InputToTxt.csproj.AssemblyReference.cache
+obj/Release/net6.0-windows/InputToTxt.GeneratedMSBuildEditorConfig.editorconfig
+UpgradeLog.htm
