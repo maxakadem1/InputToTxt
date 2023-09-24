@@ -64,6 +64,7 @@ namespace InputToTxt
             textBox1.Enabled = false;
             button4.Enabled = false;
             button2.Enabled = false;
+            button1.Enabled = false;
 
         }
 
@@ -179,6 +180,7 @@ namespace InputToTxt
                 {
                     //make inputs inactive
                     button3.Enabled = false;
+                    button1.Enabled = true;
                     button2.Enabled = true;
                     comboBox1.Enabled = false;
                     comboBox2.Enabled = false;
