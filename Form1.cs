@@ -135,18 +135,18 @@ namespace InputToTxt
                         textBox7.Text = data[2].ToString("0.000");
                         textBox9.Text = data[3].ToString("0.000");
 
-                        double channel1mAmp = (data[0]/0.249).ToString("0.000");
-                        double channel2mAmp = (data[1]/0.249).ToString("0.000");
-                        double channel4mAmp = (data[3]/0.249).ToString("0.000");
+                        String channel1mAmp = (data[0]/0.249).ToString("0.000");
+                        String channel2mAmp = (data[1]/0.249).ToString("0.000");
+                        String channel4mAmp = (data[3]/0.249).ToString("0.000");
 
-                        textBox11.text = channel1mAmp;
-                        textBox12.text = channel2mAmp;
-                        textBox13.text = channel4mAmp;
+                        textBox11.Text = channel1mAmp;
+                        textBox12.Text = channel2mAmp;
+                        textBox13.Text = channel4mAmp;
 
                         double channel1MBar = ((data[0] / 249) * 1000 - 4) * 125;
-                        double channel_O2 = ((data[1] / 249) * 1000 - 4) * 1.875;
+                        double channel_O2 = ((data[1] / 249) * 1000 - 4) * 1.5625;
                         double channel3_CO2 = data[2] * 5;
-                        double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.875;
+                        double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
 
                         textBox3.Text = channel1MBar.ToString("0.000");
                         textBox4.Text = channel_O2.ToString("0.000");
