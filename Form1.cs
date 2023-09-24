@@ -99,13 +99,13 @@ namespace InputToTxt
 
                 if (comboBox4.Text != "")
                 {
-                   returnValue = sm.SM_Open("COM" + comboBox4.Text);
+                    returnValue = sm.SM_Open("COM" + comboBox4.Text);
 
-                if (returnValue < 0)
-                {
-                // Error opening entered COM
-                      MessageBox.Show("Error opening " + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                       return;
+                    if (returnValue < 0)
+                    {
+                        // Error opening entered COM
+                        MessageBox.Show("Error opening " + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                 }
 
@@ -333,7 +333,7 @@ namespace InputToTxt
 
 
             string joinedValues = string.Join(",", data);
-            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues});
+            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues });
 
             writer.WriteLine(dataToWrite);
 

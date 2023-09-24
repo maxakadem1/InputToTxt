@@ -128,7 +128,6 @@
 Saving infomation into file:
 
 • Choose RECORDING INTERVAL for intervals of data recording into file
-• Add current date and time in DATE + TIME field
 • Press START LOGGING after START
 • To stop logging information, press STOP LOGGING
 • Information will be saved in the same directory as the file executable with current date and time</value>

@@ -826,9 +826,9 @@
             // 
             label36.AutoSize = true;
             label36.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label36.Location = new Point(32, 85);
+            label36.Location = new Point(32, 92);
             label36.Name = "label36";
-            label36.Size = new Size(563, 224);
+            label36.Size = new Size(563, 208);
             label36.TabIndex = 66;
             label36.Text = resources.GetString("label36.Text");
             // 
