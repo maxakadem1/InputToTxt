@@ -153,11 +153,18 @@ namespace InputToTxt
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
                         double channel5_O2 = ((data[4] / 249) * 1000 - 4) * 1.5625;
 
-                        textBox3.Text = channel1WaterColumn.ToString("0.000");
-                        textBox4.Text = channel2_ppmCO2.ToString("0.000");
-                        textBox6.Text = channel3_CO2.ToString("0.000");
-                        textBox8.Text = channel4_O2.ToString("0.000");
-                        textBox15.Text = channel5_O2.ToString("0.000");
+
+                        string strChannel1WaterColumn = channel1WaterColumn.ToString("0.000");
+                        string strChannel2_ppmCO2 = channel1WaterColumn.ToString("0.000");
+                        string strChannel3_CO2 = channel3_CO2.ToString("0.000");
+                        string strChannel4_O2 = channel4_O2.ToString("0.000");
+                        string strChannel5_O2 = channel5_O2.ToString("0.000");
+
+                        textBox3.Text = strChannel1WaterColumn;
+                        textBox4.Text = strChannel2_ppmCO2;
+                        textBox6.Text = strChannel3_CO2;
+                        textBox8.Text = strChannel4_O2;
+                        textBox15.Text = strChannel5_O2;
 
                         // Allow the UI to refresh
                         Application.DoEvents();
@@ -172,14 +179,17 @@ namespace InputToTxt
 
                                 fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".txt";
                                 writer = new StreamWriter(fileName, true);
-                                writer.WriteLine("DATE, TIME, channel 1 (mBar), channel 2 (%O2), channel 3(%CO2), channel 4 (%O2), location, interval");
+                                writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%CO2), channel 4 (%O2), interval");
 
                                 writeHeaders = false;
                             }
 
                             runOnce = false;
                             prevTimeMills = newTimeMills;
-                            WriteDataToFile(writer, fileName, currentDateTime, data, comboBox1.Text, comboBox2.Text);
+                            string manifoldLocation = comboBox1.Text;
+                            string interval = comboBox2.Text;
+                            string[] dataToWrite = { strChannel1WaterColumn, manifoldLocation, strChannel2_ppmCO2, strChannel3_CO2, strChannel4_O2, strChannel5_O2, interval }; //data and time will be prepended so just put the values that go after date and time here
+                            WriteDataToFile(writer, currentDateTime, dataToWrite);
                         }
 
                         currentDateTime = DateTime.Now;
@@ -291,16 +301,15 @@ namespace InputToTxt
 
 
 
-        private void WriteDataToFile(StreamWriter writer, string fileName, DateTime dataTime, double[] data, string location, string interval)
+        private void WriteDataToFile(StreamWriter writer, DateTime dataTime, string[] data)
         {
             // Get the date and time components
             DateTime currentDate = dataTime.Date;
             TimeSpan currentTime = dataTime.TimeOfDay;
 
-            string[] formattedData = Array.ConvertAll(data, d => d.ToString("0.000"));
 
-            string joinedValues = string.Join(",", formattedData);
-            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues, location, interval });
+            string joinedValues = string.Join(",", data);
+            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues});
 
             writer.WriteLine(dataToWrite);
 
