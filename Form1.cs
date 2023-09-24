@@ -26,6 +26,8 @@ namespace InputToTxt
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 1;
 
+            this.Size = new Size(1291, 812);
+
         }
 
         private void button1_Click(object sender, EventArgs e) //start logging
