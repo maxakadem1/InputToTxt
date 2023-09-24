@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>NODEDA</AssemblyName>
+    <ApplicationIcon>NODEDA_LOGO.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="NODEDA_LOGO.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="SeaMAX Dot Net">

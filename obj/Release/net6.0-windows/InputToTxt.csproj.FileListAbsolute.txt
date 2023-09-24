@@ -1,9 +1,4 @@
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\SeaMAX.dll
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\InputToTxt.exe
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\InputToTxt.deps.json
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\InputToTxt.runtimeconfig.json
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\InputToTxt.dll
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\InputToTxt.pdb
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\SeaMAX Dot Net.dll
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\SeaMAX Dot Net.xml
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.csproj.AssemblyReference.cache
@@ -14,8 +9,13 @@ C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\In
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.AssemblyInfo.cs
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.csproj.CoreCompileInputs.cache
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.csproj.CopyComplete
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.dll
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\refint\InputToTxt.dll
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.pdb
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.genruntimeconfig.cache
-C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\ref\InputToTxt.dll
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\NODEDA.exe
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\NODEDA.deps.json
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\NODEDA.runtimeconfig.json
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\NODEDA.dll
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\bin\Release\net6.0-windows\NODEDA.pdb
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\NODEDA.dll
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\refint\NODEDA.dll
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\NODEDA.pdb
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\ref\NODEDA.dll
