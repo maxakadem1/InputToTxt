@@ -108,6 +108,7 @@ namespace InputToTxt
             {
                 if (startLogging == true)
                 {
+                    button4.Enabled = false;
                     button1.Enabled = true;
                     startLogging = false;
                     runRecordLogOnce = true;
@@ -484,6 +485,11 @@ namespace InputToTxt
         }
 
         private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label36_Click(object sender, EventArgs e)
         {
 
         }

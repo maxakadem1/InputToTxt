@@ -832,6 +832,7 @@
             label36.Size = new Size(563, 224);
             label36.TabIndex = 66;
             label36.Text = resources.GetString("label36.Text");
+            label36.Click += label36_Click;
             // 
             // label37
             // 
