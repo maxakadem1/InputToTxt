@@ -45,6 +45,24 @@ namespace InputToTxt
             // Explicitly set the location to (0,0)
             this.Location = new Point(0, 0);
 
+
+            //make info inputs inactive
+            textBox2.Enabled = false;
+            textBox11.Enabled = false;
+            textBox3.Enabled = false;
+            textBox5.Enabled = false;
+            textBox4.Enabled = false;
+            textBox7.Enabled = false;
+            textBox12.Enabled = false;
+            textBox6.Enabled = false;
+            textBox9.Enabled = false;
+            textBox13.Enabled = false;
+            textBox8.Enabled = false;
+            textBox16.Enabled = false;
+            textBox14.Enabled = false;
+            textBox15.Enabled = false;
+            textBox1.Enabled = false;
+            
         }
 
         private void button1_Click(object sender, EventArgs e) //start logging
@@ -100,6 +118,13 @@ namespace InputToTxt
         private void button2_Click(object sender, EventArgs e) //STOP button
         {
 
+            //make inputs inactive
+            button3.Enabled = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            comboBox4.Enabled = true;
+
             if (isRunning)
             {
                 isRunning = false;
@@ -122,13 +147,13 @@ namespace InputToTxt
 
                 if (comboBox4.Text != "")
                 {
-                   returnValue = sm.SM_Open("COM" + comboBox4.Text);
+                    returnValue = sm.SM_Open("COM" + comboBox4.Text);
 
-                if (returnValue < 0)
-                {
-                // Error opening entered COM
-                      MessageBox.Show("Error opening COM" + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                       return;
+                    if (returnValue < 0)
+                    {
+                        // Error opening entered COM
+                        MessageBox.Show("Error opening COM" + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                 }
 
@@ -147,6 +172,13 @@ namespace InputToTxt
 
                 if (sm.IsSeaMAXOpen)
                 {
+                    //make inputs inactive
+                    button3.Enabled = false;
+                    comboBox1.Enabled = false;
+                    comboBox2.Enabled = false;
+                    comboBox3.Enabled = false;
+                    comboBox4.Enabled = false;
+
 
                     System.Diagnostics.Debug.WriteLine("Reading File From Device");  // Print to debug output
 
@@ -354,7 +386,7 @@ namespace InputToTxt
 
 
             string joinedValues = string.Join(",", data);
-            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues});
+            string dataToWrite = string.Join(",", new string[] { currentDate.ToString("yyyy-MM-dd"), currentTime.ToString(@"hh\:mm\:ss\.ff"), joinedValues });
 
             writer.WriteLine(dataToWrite);
 

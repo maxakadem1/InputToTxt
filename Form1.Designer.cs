@@ -96,6 +96,7 @@
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
             label36 = new Label();
+            label37 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -828,9 +829,19 @@
             label36.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label36.Location = new Point(32, 92);
             label36.Name = "label36";
-            label36.Size = new Size(563, 208);
+            label36.Size = new Size(563, 224);
             label36.TabIndex = 66;
             label36.Text = resources.GetString("label36.Text");
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label37.Location = new Point(32, 722);
+            label37.Name = "label37";
+            label37.Size = new Size(604, 16);
+            label37.TabIndex = 67;
+            label37.Text = "(for proper app resolution, please use 100% screen resolution setting in your display setting in your PC)";
             // 
             // Form1
             // 
@@ -838,6 +849,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1275, 773);
+            Controls.Add(label37);
             Controls.Add(label36);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
@@ -929,5 +941,6 @@
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private Label label36;
+        private Label label37;
     }
 }
