@@ -19,3 +19,4 @@ C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\NO
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\refint\NODEDA.dll
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\NODEDA.pdb
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\ref\NODEDA.dll
+C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.Properties.Resources.resources

@@ -97,10 +97,12 @@
             groupBox4 = new GroupBox();
             label36 = new Label();
             label37 = new Label();
+            pictureBox1 = new PictureBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -736,7 +738,7 @@
             // 
             label35.AutoSize = true;
             label35.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(32, 35);
+            label35.Location = new Point(81, 35);
             label35.Name = "label35";
             label35.Size = new Size(469, 29);
             label35.TabIndex = 62;
@@ -844,12 +846,22 @@
             label37.TabIndex = 67;
             label37.Text = "(for proper app resolution, please use 100% screen resolution setting in your display setting in your PC)";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.NODEDA_LOGO;
+            pictureBox1.Location = new Point(36, 32);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(37, 37);
+            pictureBox1.TabIndex = 68;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1275, 773);
+            Controls.Add(pictureBox1);
             Controls.Add(label37);
             Controls.Add(label36);
             Controls.Add(groupBox4);
@@ -869,6 +881,7 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -943,5 +956,6 @@
         private GroupBox groupBox4;
         private Label label36;
         private Label label37;
+        private PictureBox pictureBox1;
     }
 }
