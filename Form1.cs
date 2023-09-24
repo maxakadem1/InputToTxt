@@ -190,10 +190,10 @@ namespace InputToTxt
                     button3.Enabled = false;
                     button1.Enabled = true;
                     button2.Enabled = true;
-                    comboBox1.Enabled = false;
+                    //comboBox1.Enabled = false;
                     comboBox2.Enabled = false;
-                    comboBox3.Enabled = false;
-                    comboBox4.Enabled = false;
+                    //comboBox3.Enabled = false;
+                    //comboBox4.Enabled = false;
 
 
                     System.Diagnostics.Debug.WriteLine("Reading File From Device");  // Print to debug output
