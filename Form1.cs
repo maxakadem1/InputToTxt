@@ -62,7 +62,9 @@ namespace InputToTxt
             textBox14.Enabled = false;
             textBox15.Enabled = false;
             textBox1.Enabled = false;
-            
+            button4.Enabled = false;
+            button2.Enabled = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e) //start logging
@@ -82,6 +84,8 @@ namespace InputToTxt
             {
                 if (startLogging == false)
                 {
+                    button1.Enabled = false;
+                    button4.Enabled = true;
                     startLogging = true;
                 }
 
@@ -103,6 +107,7 @@ namespace InputToTxt
             {
                 if (startLogging == true)
                 {
+                    button1.Enabled = true;
                     startLogging = false;
                     runRecordLogOnce = true;
                     writeHeaders = true; //reset writeHeaders to true so that headers will be written to the next log when start logging is pressed again
@@ -174,6 +179,7 @@ namespace InputToTxt
                 {
                     //make inputs inactive
                     button3.Enabled = false;
+                    button2.Enabled = true;
                     comboBox1.Enabled = false;
                     comboBox2.Enabled = false;
                     comboBox3.Enabled = false;
