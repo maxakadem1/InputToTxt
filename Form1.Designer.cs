@@ -357,7 +357,6 @@
             label14.Size = new Size(145, 16);
             label14.TabIndex = 24;
             label14.Text = "MANIFOLD LOCATION";
-            label14.Click += label14_Click;
             // 
             // label15
             // 
