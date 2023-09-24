@@ -26,7 +26,6 @@ namespace InputToTxt
 
 
             this.Text = "NODEDA";
-            comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
 
@@ -281,7 +280,7 @@ namespace InputToTxt
                                 fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
                                 string fullFilePath = Path.Combine(folderPath, fileName);
                                 writer = new StreamWriter(fullFilePath, true);
-                                writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%O2), channel 4 (%O2), channel 5 (%O2), interval");
+                                writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%CO2), channel 4 (%O2), channel 5 (%O2), interval");
 
                                 writeHeaders = false;
                             }
