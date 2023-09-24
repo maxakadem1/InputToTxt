@@ -269,12 +269,11 @@ namespace InputToTxt
                             {
                                 writer.Close(); //close the previous writer
 
-                                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "NODEDA_LOGS");
+                                string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NODEDA_LOGS");
                                 if (!Directory.Exists(folderPath))
                                 {
                                     Directory.CreateDirectory(folderPath);
-                                }
-
+                                
 
                                 fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
                                 string fullFilePath = Path.Combine(folderPath, fileName);
