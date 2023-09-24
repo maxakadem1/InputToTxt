@@ -126,10 +126,11 @@ namespace InputToTxt
 
             //make inputs inactive
             button3.Enabled = true;
-            comboBox1.Enabled = true;
+            comboBox1.Enabled = false;
             comboBox2.Enabled = true;
             comboBox3.Enabled = true;
-            comboBox4.Enabled = true;
+            comboBox4.Enabled = false;
+
 
             if (isRunning)
             {
