@@ -29,6 +29,8 @@ namespace InputToTxt
             comboBox3.SelectedIndex = 0;
 
             this.Size = new Size(1291, 812);
+            this.WindowState = FormWindowState.Normal;
+            this.AutoScaleMode = AutoScaleMode.None;
 
         }
 
