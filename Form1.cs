@@ -142,6 +142,7 @@ namespace InputToTxt
                 startLogging = false;
                 isRunning = false;
                 runDisplayRefreshOnce = true; //restore display refresh bool, so that if start is pressed again the channels can refresh
+                writeHeaders = true;
             }
             else
             {
@@ -273,7 +274,8 @@ namespace InputToTxt
                                 if (!Directory.Exists(folderPath))
                                 {
                                     Directory.CreateDirectory(folderPath);
-                                
+
+                                }
 
                                 fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
                                 string fullFilePath = Path.Combine(folderPath, fileName);
