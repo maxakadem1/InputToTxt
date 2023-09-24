@@ -20,3 +20,11 @@ C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\re
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\NODEDA.pdb
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\ref\NODEDA.dll
 C:\Users\abdul\Desktop\Work\InputToText\InputToTxt\obj\Release\net6.0-windows\InputToTxt.Properties.Resources.resources
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.csproj.AssemblyReference.cache
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.Form1.resources
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.Properties.Resources.resources
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.csproj.GenerateResource.cache
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.AssemblyInfoInputs.cache
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.AssemblyInfo.cs
+C:\Users\VestH\Desktop\NEDA\InputToTxt\obj\Release\net6.0-windows\InputToTxt.csproj.CoreCompileInputs.cache
