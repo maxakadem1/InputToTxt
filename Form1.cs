@@ -22,7 +22,7 @@ namespace InputToTxt
         {
             InitializeComponent();
 
-            
+            this.Text = "NODEDA";
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
 
@@ -117,8 +117,16 @@ namespace InputToTxt
 
                 System.Diagnostics.Debug.WriteLine("SM_Open return value: " + returnValue);  // Print to debug output
 
+                if (comboBox1.SelectedIndex == -1)
+                {
+                    MessageBox.Show("You must select a value in MANIFOLD LOCATION.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (sm.IsSeaMAXOpen)
                 {
+
+
 
                     System.Diagnostics.Debug.WriteLine("Reading File From Device");  // Print to debug output
 
