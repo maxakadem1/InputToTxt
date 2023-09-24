@@ -103,7 +103,7 @@ namespace InputToTxt
                 if (returnValue < 0)
                 {
                 // Error opening entered COM
-                      MessageBox.Show("Error opening " + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                      MessageBox.Show("Error opening COM" + comboBox4.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                        return;
                     }
                 }
