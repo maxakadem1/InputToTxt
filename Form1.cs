@@ -290,7 +290,7 @@ namespace InputToTxt
                             prevRecordLogTimeMills = newTimeMills;
                             string manifoldLocation = comboBox1.Text;
                             string interval = comboBox2.Text;
-                            string[] dataToWrite = { strChannel1WaterColumn, manifoldLocation, strChannel2_ppmCO2, strChannel3_O2, strChannel4_O2, strChannel5_O2, interval }; //data and time will be prepended so just put the values that go after date and time here
+                            string[] dataToWrite = { strChannel1WaterColumn, manifoldLocation, strChannel2_ppmCO2, strChannel3_CO2, strChannel4_O2, strChannel5_O2, interval }; //data and time will be prepended so just put the values that go after date and time here
                             WriteDataToFile(writer, currentDateTime, dataToWrite);
                         }
 
