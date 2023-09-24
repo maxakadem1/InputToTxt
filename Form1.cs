@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Linq;
 using System.Timers;
 using static Sealevel.SeaMAX;
+using System.IO;
 
 namespace InputToTxt
 {
@@ -268,8 +269,16 @@ namespace InputToTxt
                             {
                                 writer.Close(); //close the previous writer
 
-                                fileName = "./NODEDA_LOGS/LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
-                                writer = new StreamWriter(fileName, true);
+                                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "NODEDA_LOGS");
+                                if (!Directory.Exists(folderPath))
+                                {
+                                    Directory.CreateDirectory(folderPath);
+                                
+
+
+                                fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
+                                string fullFilePath = Path.Combine(folderPath, fileName);
+                                writer = new StreamWriter(fullFilePath, true);
                                 writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%CO2), channel 4 (%O2), interval");
 
                                 writeHeaders = false;
