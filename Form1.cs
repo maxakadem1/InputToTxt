@@ -311,8 +311,16 @@ namespace InputToTxt
 
         // You may want to close the connection when the form is closed
         protected override void OnFormClosing(FormClosingEventArgs e)
+
+
         {
             base.OnFormClosing(e);
+
+            // Update your variables here
+            startLogging = false;
+            isRunning = false;
+            runDisplayRefreshOnce = true;
+            writeHeaders = true;
 
             if (sm != null && sm.IsSeaMAXOpen)
             {
