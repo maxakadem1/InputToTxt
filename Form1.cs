@@ -209,10 +209,10 @@ namespace InputToTxt
                     string fileName = "Error_LOG_something_is_wrong.txt";
                     StreamWriter writer = new StreamWriter(fileName, true);
 
-                    int displayRefresh = int.Parse(comboBox3.Text);
                     while (isRunning)
                     {
                         textBox1.Text = currentDateTime.ToString();
+                        int displayRefresh = int.Parse(comboBox3.Text);
 
                         double[] data = ReadDataFromDevice(sm, 5); // 5 channels to read
 
@@ -221,7 +221,7 @@ namespace InputToTxt
                         String channel4mAmp = (data[3] / 0.249).ToString("0.000");
                         String channel5mAmp = (data[4] / 0.249).ToString("0.000");
 
-                        double channel1WaterColumn = (data[0] - 12) * 0.125;
+                        double channel1WaterColumn = ((data[0] / 0.249) - 12) * 0.125;
                         double channel2_ppmCO2 = data[1] * 2000;
                         double channel3_CO2 = data[2] * 5;
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
