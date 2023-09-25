@@ -67,6 +67,10 @@ namespace InputToTxt
             button4.Enabled = false;
             button2.Enabled = false;
             button1.Enabled = false;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
 
