@@ -63,6 +63,22 @@ namespace InputToTxt
             textBox16.Enabled = false;
             textBox14.Enabled = false;
             textBox15.Enabled = false;
+
+            // chanel 6
+            textBox18.Enabled = false;
+            textBox10.Enabled = false;
+            textBox17.Enabled = false;
+
+            // chanel 7
+            textBox21.Enabled = false;
+            textBox19.Enabled = false;
+            textBox20.Enabled = false;
+
+            //chanel 8
+            textBox24.Enabled = false;
+            textBox22.Enabled = false;
+            textBox23.Enabled = false;
+
             textBox1.Enabled = false;
             button4.Enabled = false;
             button2.Enabled = false;

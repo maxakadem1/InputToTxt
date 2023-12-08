@@ -720,7 +720,7 @@
             groupBox1.Controls.Add(label16);
             groupBox1.Controls.Add(button2);
             groupBox1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(658, 550);
+            groupBox1.Location = new Point(658, 563);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(387, 136);
             groupBox1.TabIndex = 58;
@@ -780,7 +780,7 @@
             groupBox2.Controls.Add(comboBox2);
             groupBox2.Controls.Add(label20);
             groupBox2.Controls.Add(comboBox3);
-            groupBox2.Location = new Point(37, 550);
+            groupBox2.Location = new Point(37, 563);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(584, 136);
             groupBox2.TabIndex = 63;
@@ -864,7 +864,7 @@
             groupBox3.Controls.Add(label19);
             groupBox3.Controls.Add(label18);
             groupBox3.Controls.Add(textBox13);
-            groupBox3.Location = new Point(36, 190);
+            groupBox3.Location = new Point(36, 203);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(1383, 354);
             groupBox3.TabIndex = 64;
@@ -1136,7 +1136,7 @@
             // 
             groupBox4.Controls.Add(button4);
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(1079, 550);
+            groupBox4.Location = new Point(1079, 563);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(209, 136);
             groupBox4.TabIndex = 65;
@@ -1187,7 +1187,7 @@
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(1442, 716);
+            ClientSize = new Size(1442, 726);
             Controls.Add(label56);
             Controls.Add(pictureBox1);
             Controls.Add(label37);
