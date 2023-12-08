@@ -235,24 +235,33 @@ namespace InputToTxt
                         textBox1.Text = currentDateTime.ToString();
                         int displayRefresh = int.Parse(comboBox3.Text);
 
-                        double[] data = ReadDataFromDevice(sm, 5); // 5 channels to read
+                        double[] data = ReadDataFromDevice(sm, 8); // 8 channels to read
 
                         String channel1mAmp = (data[0] / 0.249).ToString("0.000");
                         String channel3mAmp = (data[2] / 0.249).ToString("0.000");
                         String channel4mAmp = (data[3] / 0.249).ToString("0.000");
                         String channel5mAmp = (data[4] / 0.249).ToString("0.000");
+                        String channel6mAmp = (data[5] / 0.249).ToString("0.000");
+                        String channel7mAmp = (data[6] / 0.249).ToString("0.000");
+                        String channel8mAmp = (data[7] / 0.249).ToString("0.000");
 
                         double channel1WaterColumn = ((data[0] / 0.249) - 12) * 0.125;
                         double channel2_ppmCO2 = data[1] * 2000;
-                        double channel3_CO2 = ((data[2] / 249) * 1000 - 4) * 1.5625; //channel3_CO2 should actually be O2, should fix the variable names for it next time we work on this (Denys)
+                        double channel3_O2 = ((data[2] / 249) * 1000 - 4) * 1.5625; //channel3_CO2 should actually be O2, should fix the variable names for it next time we work on this (Denys)
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
                         double channel5_O2 = ((data[4] / 249) * 1000 - 4) * 1.5625;
+                        double channel6_O2 = ((data[5] / 249) * 1000 - 4) * 1.5625;
+                        double channel7_O2 = ((data[6] / 249) * 1000 - 4) * 1.5625;
+                        double channel8_O2 = ((data[7] / 249) * 1000 - 4) * 1.5625;
 
                         string strChannel1WaterColumn = channel1WaterColumn.ToString("0.000");
                         string strChannel2_ppmCO2 = channel1WaterColumn.ToString("0.000");
-                        string strChannel3_CO2 = channel3_CO2.ToString("0.000");
+                        string strChannel3_O2 = channel3_O2.ToString("0.000");
                         string strChannel4_O2 = channel4_O2.ToString("0.000");
                         string strChannel5_O2 = channel5_O2.ToString("0.000");
+                        string strChannel6_O2 = channel6_O2.ToString("0.000");
+                        string strChannel7_O2 = channel7_O2.ToString("0.000");
+                        string strChannel8_O2 = channel8_O2.ToString("0.000");
 
                         long newTimeMills = now.ToUnixTimeMilliseconds();
                         if (runDisplayRefreshOnce || (newTimeMills - prevDisplayRefreshTimeMills) >= displayRefresh * 1000)
@@ -263,19 +272,28 @@ namespace InputToTxt
                             textBox7.Text = data[2].ToString("0.000"); //channel # 3
                             textBox9.Text = data[3].ToString("0.000"); //channel # 4
                             textBox16.Text = data[4].ToString("0.000"); // channel # 5
+                            textBox18.Text = data[5].ToString("0.000"); // channel # 6
+                            textBox21.Text = data[6].ToString("0.000"); // channel # 7
+                            textBox24.Text = data[7].ToString("0.000"); // channel # 8
 
                             //Second row of values (Channles 1,3,4,5 with mA values)
                             textBox11.Text = channel1mAmp;
                             textBox12.Text = channel3mAmp;
                             textBox13.Text = channel4mAmp;
                             textBox14.Text = channel5mAmp;
+                            textBox10.Text = channel6mAmp;
+                            textBox19.Text = channel7mAmp;
+                            textBox22.Text = channel8mAmp;
 
                             //Third row of values ("WC, pppmCO2, %CO2, %O2, %O2)
                             textBox3.Text = strChannel1WaterColumn;
                             textBox4.Text = strChannel2_ppmCO2;
-                            textBox6.Text = strChannel3_CO2;
+                            textBox6.Text = strChannel3_O2;
                             textBox8.Text = strChannel4_O2;
                             textBox15.Text = strChannel5_O2;
+                            textBox17.Text = strChannel6_O2;
+                            textBox20.Text = strChannel7_O2;
+                            textBox23.Text = strChannel8_O2; 
 
                             // Allow the UI to refresh
                             Application.DoEvents();
@@ -301,7 +319,7 @@ namespace InputToTxt
                                 fileName = "LOG_" + currentDate.ToString("yyyy-MM-dd") + "_" + currentTime.ToString(@"hh\_mm\_ss") + ".csv";
                                 string fullFilePath = Path.Combine(folderPath, fileName);
                                 writer = new StreamWriter(fullFilePath, true);
-                                writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%O2), channel 4 (%O2), channel 5 (%O2), interval");
+                                writer.WriteLine("DATE, TIME, channel 1 (\"WC), Manifold Location, channel 2 (CO2 ppm), channel 3 (%O2), channel 4 (%O2), channel 5 (%O2), channel 6 (%O2), channel 7 (%O2), channel 8 (%O2), interval");
 
                                 writeHeaders = false;
                             }
@@ -310,7 +328,7 @@ namespace InputToTxt
                             prevRecordLogTimeMills = newTimeMills;
                             string manifoldLocation = comboBox1.Text;
                             string interval = comboBox2.Text;
-                            string[] dataToWrite = { strChannel1WaterColumn, manifoldLocation, strChannel2_ppmCO2, strChannel3_CO2, strChannel4_O2, strChannel5_O2, interval }; //data and time will be prepended so just put the values that go after date and time here
+                            string[] dataToWrite = { strChannel1WaterColumn, manifoldLocation, strChannel2_ppmCO2, strChannel3_O2, strChannel4_O2, strChannel5_O2, strChannel6_O2, strChannel7_O2, strChannel8_O2, interval }; //data and time will be prepended so just put the values that go after date and time here
                             WriteDataToFile(writer, currentDateTime, dataToWrite);
                         }
 
