@@ -98,6 +98,33 @@
             label36 = new Label();
             label37 = new Label();
             pictureBox1 = new PictureBox();
+            label38 = new Label();
+            label39 = new Label();
+            label40 = new Label();
+            textBox10 = new TextBox();
+            label41 = new Label();
+            label42 = new Label();
+            textBox17 = new TextBox();
+            textBox18 = new TextBox();
+            label43 = new Label();
+            label44 = new Label();
+            label45 = new Label();
+            label46 = new Label();
+            textBox19 = new TextBox();
+            label47 = new Label();
+            label48 = new Label();
+            textBox20 = new TextBox();
+            textBox21 = new TextBox();
+            label49 = new Label();
+            label50 = new Label();
+            label51 = new Label();
+            label52 = new Label();
+            textBox22 = new TextBox();
+            label53 = new Label();
+            label54 = new Label();
+            textBox23 = new TextBox();
+            textBox24 = new TextBox();
+            label55 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -108,7 +135,7 @@
             // button1
             // 
             button1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(31, 41);
+            button1.Location = new Point(31, 89);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(160, 38);
@@ -129,7 +156,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(37, 128);
+            textBox2.Location = new Point(30, 128);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(108, 22);
@@ -139,7 +166,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(37, 236);
+            textBox3.Location = new Point(30, 236);
             textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(108, 22);
@@ -149,7 +176,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(210, 236);
+            textBox4.Location = new Point(194, 236);
             textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(108, 22);
@@ -159,7 +186,7 @@
             // textBox5
             // 
             textBox5.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(210, 128);
+            textBox5.Location = new Point(194, 128);
             textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(108, 22);
@@ -168,7 +195,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(410, 236);
+            textBox6.Location = new Point(383, 236);
             textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(108, 22);
@@ -178,7 +205,7 @@
             // textBox7
             // 
             textBox7.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(410, 128);
+            textBox7.Location = new Point(383, 128);
             textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(108, 22);
@@ -187,7 +214,7 @@
             // textBox8
             // 
             textBox8.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.Location = new Point(586, 236);
+            textBox8.Location = new Point(559, 237);
             textBox8.Margin = new Padding(3, 2, 3, 2);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(108, 22);
@@ -197,7 +224,7 @@
             // textBox9
             // 
             textBox9.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox9.Location = new Point(586, 128);
+            textBox9.Location = new Point(559, 129);
             textBox9.Margin = new Padding(3, 2, 3, 2);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(108, 22);
@@ -208,7 +235,7 @@
             comboBox1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7" });
-            comboBox1.Location = new Point(308, 336);
+            comboBox1.Location = new Point(282, 341);
             comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(125, 24);
@@ -230,7 +257,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(37, 48);
+            label2.Location = new Point(30, 48);
             label2.Name = "label2";
             label2.Size = new Size(70, 16);
             label2.TabIndex = 12;
@@ -241,7 +268,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(151, 132);
+            label3.Location = new Point(144, 132);
             label3.Name = "label3";
             label3.Size = new Size(16, 16);
             label3.TabIndex = 13;
@@ -251,7 +278,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(325, 132);
+            label4.Location = new Point(309, 132);
             label4.Name = "label4";
             label4.Size = new Size(16, 16);
             label4.TabIndex = 14;
@@ -261,7 +288,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(701, 132);
+            label5.Location = new Point(674, 133);
             label5.Name = "label5";
             label5.Size = new Size(16, 16);
             label5.TabIndex = 15;
@@ -271,7 +298,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(151, 240);
+            label6.Location = new Point(144, 240);
             label6.Name = "label6";
             label6.Size = new Size(33, 16);
             label6.TabIndex = 16;
@@ -282,7 +309,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(325, 240);
+            label7.Location = new Point(309, 240);
             label7.Name = "label7";
             label7.Size = new Size(58, 16);
             label7.TabIndex = 17;
@@ -293,7 +320,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(701, 240);
+            label8.Location = new Point(674, 241);
             label8.Name = "label8";
             label8.Size = new Size(36, 16);
             label8.TabIndex = 18;
@@ -304,9 +331,9 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(525, 240);
+            label9.Location = new Point(498, 240);
             label9.Name = "label9";
-            label9.Size = new Size(45, 16);
+            label9.Size = new Size(36, 16);
             label9.TabIndex = 19;
             label9.Text = "%O2";
             label9.Click += label9_Click;
@@ -315,7 +342,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(525, 132);
+            label10.Location = new Point(498, 132);
             label10.Name = "label10";
             label10.Size = new Size(16, 16);
             label10.TabIndex = 20;
@@ -325,7 +352,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(210, 48);
+            label11.Location = new Point(194, 48);
             label11.Name = "label11";
             label11.Size = new Size(70, 16);
             label11.TabIndex = 21;
@@ -335,7 +362,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(410, 48);
+            label12.Location = new Point(383, 48);
             label12.Name = "label12";
             label12.Size = new Size(70, 16);
             label12.TabIndex = 22;
@@ -345,7 +372,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(586, 48);
+            label13.Location = new Point(559, 49);
             label13.Name = "label13";
             label13.Size = new Size(70, 16);
             label13.TabIndex = 23;
@@ -355,7 +382,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.Location = new Point(300, 316);
+            label14.Location = new Point(274, 321);
             label14.Name = "label14";
             label14.Size = new Size(145, 16);
             label14.TabIndex = 24;
@@ -388,7 +415,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.Location = new Point(30, 26);
+            label16.Location = new Point(28, 55);
             label16.Name = "label16";
             label16.Size = new Size(110, 16);
             label16.TabIndex = 28;
@@ -397,7 +424,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(31, 143);
+            button2.Location = new Point(29, 172);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(160, 38);
@@ -408,7 +435,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(31, 90);
+            button3.Location = new Point(29, 119);
             button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
             button3.Size = new Size(160, 38);
@@ -420,7 +447,7 @@
             // button4
             // 
             button4.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(30, 96);
+            button4.Location = new Point(30, 144);
             button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
             button4.Size = new Size(161, 39);
@@ -432,7 +459,7 @@
             // textBox11
             // 
             textBox11.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox11.Location = new Point(37, 183);
+            textBox11.Location = new Point(30, 183);
             textBox11.Margin = new Padding(3, 2, 3, 2);
             textBox11.Name = "textBox11";
             textBox11.Size = new Size(108, 22);
@@ -442,7 +469,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(151, 189);
+            label17.Location = new Point(144, 189);
             label17.Name = "label17";
             label17.Size = new Size(27, 16);
             label17.TabIndex = 33;
@@ -452,7 +479,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(525, 189);
+            label18.Location = new Point(498, 189);
             label18.Name = "label18";
             label18.Size = new Size(27, 16);
             label18.TabIndex = 35;
@@ -461,7 +488,7 @@
             // textBox12
             // 
             textBox12.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox12.Location = new Point(410, 183);
+            textBox12.Location = new Point(383, 183);
             textBox12.Margin = new Padding(3, 2, 3, 2);
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(108, 22);
@@ -471,7 +498,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(701, 189);
+            label19.Location = new Point(674, 190);
             label19.Name = "label19";
             label19.Size = new Size(27, 16);
             label19.TabIndex = 37;
@@ -480,7 +507,7 @@
             // textBox13
             // 
             textBox13.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox13.Location = new Point(586, 183);
+            textBox13.Location = new Point(559, 184);
             textBox13.Margin = new Padding(3, 2, 3, 2);
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(108, 22);
@@ -512,7 +539,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(37, 75);
+            label21.Location = new Point(30, 75);
             label21.Name = "label21";
             label21.Size = new Size(59, 16);
             label21.TabIndex = 40;
@@ -522,7 +549,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(37, 93);
+            label22.Location = new Point(30, 93);
             label22.Name = "label22";
             label22.Size = new Size(64, 16);
             label22.TabIndex = 41;
@@ -533,7 +560,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(210, 75);
+            label23.Location = new Point(194, 75);
             label23.Name = "label23";
             label23.Size = new Size(33, 16);
             label23.TabIndex = 42;
@@ -543,7 +570,7 @@
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.Location = new Point(210, 93);
+            label24.Location = new Point(194, 93);
             label24.Name = "label24";
             label24.Size = new Size(101, 16);
             label24.TabIndex = 43;
@@ -553,7 +580,7 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(410, 75);
+            label25.Location = new Point(383, 75);
             label25.Name = "label25";
             label25.Size = new Size(24, 16);
             label25.TabIndex = 44;
@@ -563,7 +590,7 @@
             // 
             label26.AutoSize = true;
             label26.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(410, 93);
+            label26.Location = new Point(383, 93);
             label26.Name = "label26";
             label26.Size = new Size(67, 16);
             label26.TabIndex = 45;
@@ -573,7 +600,7 @@
             // 
             label27.AutoSize = true;
             label27.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label27.Location = new Point(768, 48);
+            label27.Location = new Point(732, 50);
             label27.Name = "label27";
             label27.Size = new Size(70, 16);
             label27.TabIndex = 46;
@@ -583,7 +610,7 @@
             // 
             label28.AutoSize = true;
             label28.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label28.Location = new Point(884, 189);
+            label28.Location = new Point(848, 191);
             label28.Name = "label28";
             label28.Size = new Size(27, 16);
             label28.TabIndex = 52;
@@ -592,7 +619,7 @@
             // textBox14
             // 
             textBox14.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox14.Location = new Point(768, 183);
+            textBox14.Location = new Point(732, 185);
             textBox14.Margin = new Padding(3, 2, 3, 2);
             textBox14.Name = "textBox14";
             textBox14.Size = new Size(108, 22);
@@ -602,7 +629,7 @@
             // 
             label29.AutoSize = true;
             label29.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(884, 240);
+            label29.Location = new Point(848, 242);
             label29.Name = "label29";
             label29.Size = new Size(36, 16);
             label29.TabIndex = 50;
@@ -612,7 +639,7 @@
             // 
             label30.AutoSize = true;
             label30.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(884, 132);
+            label30.Location = new Point(848, 134);
             label30.Name = "label30";
             label30.Size = new Size(16, 16);
             label30.TabIndex = 49;
@@ -621,7 +648,7 @@
             // textBox15
             // 
             textBox15.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox15.Location = new Point(768, 236);
+            textBox15.Location = new Point(732, 238);
             textBox15.Margin = new Padding(3, 2, 3, 2);
             textBox15.Name = "textBox15";
             textBox15.Size = new Size(108, 22);
@@ -630,7 +657,7 @@
             // textBox16
             // 
             textBox16.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox16.Location = new Point(768, 128);
+            textBox16.Location = new Point(732, 130);
             textBox16.Margin = new Padding(3, 2, 3, 2);
             textBox16.Name = "textBox16";
             textBox16.Size = new Size(108, 22);
@@ -640,7 +667,7 @@
             // 
             label31.AutoSize = true;
             label31.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(586, 75);
+            label31.Location = new Point(559, 76);
             label31.Name = "label31";
             label31.Size = new Size(24, 16);
             label31.TabIndex = 53;
@@ -650,7 +677,7 @@
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(586, 93);
+            label32.Location = new Point(559, 94);
             label32.Name = "label32";
             label32.Size = new Size(67, 16);
             label32.TabIndex = 54;
@@ -660,7 +687,7 @@
             // 
             label33.AutoSize = true;
             label33.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label33.Location = new Point(768, 93);
+            label33.Location = new Point(732, 95);
             label33.Name = "label33";
             label33.Size = new Size(67, 16);
             label33.TabIndex = 56;
@@ -670,7 +697,7 @@
             // 
             label34.AutoSize = true;
             label34.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.Location = new Point(768, 75);
+            label34.Location = new Point(732, 77);
             label34.Name = "label34";
             label34.Size = new Size(24, 16);
             label34.TabIndex = 55;
@@ -680,7 +707,7 @@
             // 
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
-            comboBox4.Location = new Point(31, 45);
+            comboBox4.Location = new Point(29, 74);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(160, 24);
             comboBox4.TabIndex = 57;
@@ -692,9 +719,9 @@
             groupBox1.Controls.Add(label16);
             groupBox1.Controls.Add(button2);
             groupBox1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(1008, 521);
+            groupBox1.Location = new Point(292, 739);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(220, 198);
+            groupBox1.Size = new Size(220, 257);
             groupBox1.TabIndex = 58;
             groupBox1.TabStop = false;
             // 
@@ -702,7 +729,7 @@
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            panel1.Location = new Point(210, 277);
+            panel1.Location = new Point(188, 280);
             panel1.Name = "panel1";
             panel1.Size = new Size(1, 16);
             panel1.TabIndex = 59;
@@ -711,7 +738,7 @@
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            panel2.Location = new Point(517, 277);
+            panel2.Location = new Point(495, 280);
             panel2.Name = "panel2";
             panel2.Size = new Size(1, 16);
             panel2.TabIndex = 60;
@@ -720,7 +747,7 @@
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            panel3.Location = new Point(211, 293);
+            panel3.Location = new Point(189, 296);
             panel3.Name = "panel3";
             panel3.Size = new Size(307, 1);
             panel3.TabIndex = 61;
@@ -729,7 +756,7 @@
             // 
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            panel4.Location = new Point(366, 294);
+            panel4.Location = new Point(344, 297);
             panel4.Name = "panel4";
             panel4.Size = new Size(1, 16);
             panel4.TabIndex = 60;
@@ -752,7 +779,7 @@
             groupBox2.Controls.Add(comboBox2);
             groupBox2.Controls.Add(label20);
             groupBox2.Controls.Add(comboBox3);
-            groupBox2.Location = new Point(1008, 52);
+            groupBox2.Location = new Point(32, 739);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(220, 257);
             groupBox2.TabIndex = 63;
@@ -760,6 +787,33 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(label50);
+            groupBox3.Controls.Add(label51);
+            groupBox3.Controls.Add(label52);
+            groupBox3.Controls.Add(textBox22);
+            groupBox3.Controls.Add(label53);
+            groupBox3.Controls.Add(label54);
+            groupBox3.Controls.Add(textBox23);
+            groupBox3.Controls.Add(textBox24);
+            groupBox3.Controls.Add(label55);
+            groupBox3.Controls.Add(label44);
+            groupBox3.Controls.Add(label45);
+            groupBox3.Controls.Add(label46);
+            groupBox3.Controls.Add(textBox19);
+            groupBox3.Controls.Add(label47);
+            groupBox3.Controls.Add(label48);
+            groupBox3.Controls.Add(textBox20);
+            groupBox3.Controls.Add(textBox21);
+            groupBox3.Controls.Add(label49);
+            groupBox3.Controls.Add(label38);
+            groupBox3.Controls.Add(label39);
+            groupBox3.Controls.Add(label40);
+            groupBox3.Controls.Add(textBox10);
+            groupBox3.Controls.Add(label41);
+            groupBox3.Controls.Add(label42);
+            groupBox3.Controls.Add(textBox17);
+            groupBox3.Controls.Add(textBox18);
+            groupBox3.Controls.Add(label43);
             groupBox3.Controls.Add(label2);
             groupBox3.Controls.Add(textBox2);
             groupBox3.Controls.Add(textBox3);
@@ -811,17 +865,18 @@
             groupBox3.Controls.Add(textBox13);
             groupBox3.Location = new Point(32, 328);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(945, 391);
+            groupBox3.Size = new Size(1417, 391);
             groupBox3.TabIndex = 64;
             groupBox3.TabStop = false;
+            groupBox3.Enter += groupBox3_Enter;
             // 
             // groupBox4
             // 
             groupBox4.Controls.Add(button4);
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(1008, 328);
+            groupBox4.Location = new Point(549, 739);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(220, 173);
+            groupBox4.Size = new Size(220, 257);
             groupBox4.TabIndex = 65;
             groupBox4.TabStop = false;
             // 
@@ -840,7 +895,7 @@
             // 
             label37.AutoSize = true;
             label37.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label37.Location = new Point(32, 722);
+            label37.Location = new Point(32, 1008);
             label37.Name = "label37";
             label37.Size = new Size(604, 16);
             label37.TabIndex = 67;
@@ -855,12 +910,273 @@
             pictureBox1.TabIndex = 68;
             pictureBox1.TabStop = false;
             // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label38.Location = new Point(904, 95);
+            label38.Name = "label38";
+            label38.Size = new Size(67, 16);
+            label38.TabIndex = 70;
+            label38.Text = "(0 to 25%)";
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label39.Location = new Point(904, 77);
+            label39.Name = "label39";
+            label39.Size = new Size(24, 16);
+            label39.TabIndex = 69;
+            label39.Text = "O2";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label40.Location = new Point(1020, 191);
+            label40.Name = "label40";
+            label40.Size = new Size(27, 16);
+            label40.TabIndex = 68;
+            label40.Text = "mA";
+            // 
+            // textBox10
+            // 
+            textBox10.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox10.Location = new Point(904, 185);
+            textBox10.Margin = new Padding(3, 2, 3, 2);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(108, 22);
+            textBox10.TabIndex = 67;
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label41.Location = new Point(1020, 242);
+            label41.Name = "label41";
+            label41.Size = new Size(36, 16);
+            label41.TabIndex = 66;
+            label41.Text = "%O2";
+            // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label42.Location = new Point(1020, 134);
+            label42.Name = "label42";
+            label42.Size = new Size(16, 16);
+            label42.TabIndex = 65;
+            label42.Text = "V";
+            // 
+            // textBox17
+            // 
+            textBox17.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox17.Location = new Point(904, 238);
+            textBox17.Margin = new Padding(3, 2, 3, 2);
+            textBox17.Name = "textBox17";
+            textBox17.Size = new Size(108, 22);
+            textBox17.TabIndex = 64;
+            // 
+            // textBox18
+            // 
+            textBox18.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox18.Location = new Point(904, 130);
+            textBox18.Margin = new Padding(3, 2, 3, 2);
+            textBox18.Name = "textBox18";
+            textBox18.Size = new Size(108, 22);
+            textBox18.TabIndex = 63;
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label43.Location = new Point(904, 50);
+            label43.Name = "label43";
+            label43.Size = new Size(70, 16);
+            label43.TabIndex = 62;
+            label43.Text = "CHANEL 6";
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label44.Location = new Point(1073, 95);
+            label44.Name = "label44";
+            label44.Size = new Size(67, 16);
+            label44.TabIndex = 79;
+            label44.Text = "(0 to 25%)";
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label45.Location = new Point(1073, 77);
+            label45.Name = "label45";
+            label45.Size = new Size(24, 16);
+            label45.TabIndex = 78;
+            label45.Text = "O2";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label46.Location = new Point(1189, 191);
+            label46.Name = "label46";
+            label46.Size = new Size(27, 16);
+            label46.TabIndex = 77;
+            label46.Text = "mA";
+            // 
+            // textBox19
+            // 
+            textBox19.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox19.Location = new Point(1073, 185);
+            textBox19.Margin = new Padding(3, 2, 3, 2);
+            textBox19.Name = "textBox19";
+            textBox19.Size = new Size(108, 22);
+            textBox19.TabIndex = 76;
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label47.Location = new Point(1189, 242);
+            label47.Name = "label47";
+            label47.Size = new Size(36, 16);
+            label47.TabIndex = 75;
+            label47.Text = "%O2";
+            // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label48.Location = new Point(1189, 134);
+            label48.Name = "label48";
+            label48.Size = new Size(16, 16);
+            label48.TabIndex = 74;
+            label48.Text = "V";
+            // 
+            // textBox20
+            // 
+            textBox20.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox20.Location = new Point(1073, 238);
+            textBox20.Margin = new Padding(3, 2, 3, 2);
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(108, 22);
+            textBox20.TabIndex = 73;
+            // 
+            // textBox21
+            // 
+            textBox21.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox21.Location = new Point(1073, 130);
+            textBox21.Margin = new Padding(3, 2, 3, 2);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(108, 22);
+            textBox21.TabIndex = 72;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label49.Location = new Point(1073, 50);
+            label49.Name = "label49";
+            label49.Size = new Size(70, 16);
+            label49.TabIndex = 71;
+            label49.Text = "CHANEL 7";
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label50.Location = new Point(1246, 97);
+            label50.Name = "label50";
+            label50.Size = new Size(67, 16);
+            label50.TabIndex = 88;
+            label50.Text = "(0 to 25%)";
+            // 
+            // label51
+            // 
+            label51.AutoSize = true;
+            label51.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label51.Location = new Point(1246, 79);
+            label51.Name = "label51";
+            label51.Size = new Size(24, 16);
+            label51.TabIndex = 87;
+            label51.Text = "O2";
+            // 
+            // label52
+            // 
+            label52.AutoSize = true;
+            label52.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label52.Location = new Point(1362, 193);
+            label52.Name = "label52";
+            label52.Size = new Size(27, 16);
+            label52.TabIndex = 86;
+            label52.Text = "mA";
+            // 
+            // textBox22
+            // 
+            textBox22.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox22.Location = new Point(1246, 187);
+            textBox22.Margin = new Padding(3, 2, 3, 2);
+            textBox22.Name = "textBox22";
+            textBox22.Size = new Size(108, 22);
+            textBox22.TabIndex = 85;
+            // 
+            // label53
+            // 
+            label53.AutoSize = true;
+            label53.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label53.Location = new Point(1362, 244);
+            label53.Name = "label53";
+            label53.Size = new Size(36, 16);
+            label53.TabIndex = 84;
+            label53.Text = "%O2";
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label54.Location = new Point(1362, 136);
+            label54.Name = "label54";
+            label54.Size = new Size(16, 16);
+            label54.TabIndex = 83;
+            label54.Text = "V";
+            // 
+            // textBox23
+            // 
+            textBox23.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox23.Location = new Point(1246, 240);
+            textBox23.Margin = new Padding(3, 2, 3, 2);
+            textBox23.Name = "textBox23";
+            textBox23.Size = new Size(108, 22);
+            textBox23.TabIndex = 82;
+            // 
+            // textBox24
+            // 
+            textBox24.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox24.Location = new Point(1246, 132);
+            textBox24.Margin = new Padding(3, 2, 3, 2);
+            textBox24.Name = "textBox24";
+            textBox24.Size = new Size(108, 22);
+            textBox24.TabIndex = 81;
+            // 
+            // label55
+            // 
+            label55.AutoSize = true;
+            label55.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label55.Location = new Point(1246, 52);
+            label55.Name = "label55";
+            label55.Size = new Size(70, 16);
+            label55.TabIndex = 80;
+            label55.Text = "CHANEL 8";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(1275, 773);
+            ClientSize = new Size(1472, 1033);
             Controls.Add(pictureBox1);
             Controls.Add(label37);
             Controls.Add(label36);
@@ -957,5 +1273,32 @@
         private Label label36;
         private Label label37;
         private PictureBox pictureBox1;
+        private Label label50;
+        private Label label51;
+        private Label label52;
+        public TextBox textBox22;
+        private Label label53;
+        private Label label54;
+        public TextBox textBox23;
+        public TextBox textBox24;
+        private Label label55;
+        private Label label44;
+        private Label label45;
+        private Label label46;
+        public TextBox textBox19;
+        private Label label47;
+        private Label label48;
+        public TextBox textBox20;
+        public TextBox textBox21;
+        private Label label49;
+        private Label label38;
+        private Label label39;
+        private Label label40;
+        public TextBox textBox10;
+        private Label label41;
+        private Label label42;
+        public TextBox textBox17;
+        public TextBox textBox18;
+        private Label label43;
     }
 }
