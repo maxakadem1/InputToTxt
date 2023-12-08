@@ -31,9 +31,9 @@ namespace InputToTxt
             comboBox3.SelectedIndex = 0;
 
             // Set a fixed size and disable resizing
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Size = new Size(1291, 812);
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.Size = new Size(1291, 812);
 
             // Ensure the form's WindowState is set to Normal
             this.WindowState = FormWindowState.Normal;
