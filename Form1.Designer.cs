@@ -308,7 +308,7 @@
             label9.Name = "label9";
             label9.Size = new Size(45, 16);
             label9.TabIndex = 19;
-            label9.Text = "%CO2";
+            label9.Text = "%O2";
             label9.Click += label9_Click;
             // 
             // label10

@@ -228,7 +228,7 @@ namespace InputToTxt
 
                         double channel1WaterColumn = ((data[0] / 0.249) - 12) * 0.125;
                         double channel2_ppmCO2 = data[1] * 2000;
-                        double channel3_CO2 = data[2] * 5;
+                        double channel3_CO2 = ((data[2] / 249) * 1000 - 4) * 1.5625; //channel3_CO2 should actually be O2, should fix the variable names for it next time we work on this (Denys)
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
                         double channel5_O2 = ((data[4] / 249) * 1000 - 4) * 1.5625;
 
@@ -513,6 +513,11 @@ namespace InputToTxt
         }
 
         private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
         {
 
         }
