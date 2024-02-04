@@ -246,7 +246,7 @@ namespace InputToTxt
                         String channel8mAmp = (data[7] / 0.249).ToString("0.000");
 
                         double channel1WaterColumn = ((data[0] / 0.249) - 12) * 0.125;
-                        double channel2_ppmCO2 = data[1] * 2000;
+                        double channel2_ppmCO2 = data[1] * 1000;
                         double channel3_O2 = ((data[2] / 249) * 1000 - 4) * 1.5625; //channel3_CO2 should actually be O2, should fix the variable names for it next time we work on this (Denys)
                         double channel4_O2 = ((data[3] / 249) * 1000 - 4) * 1.5625;
                         double channel5_O2 = ((data[4] / 249) * 1000 - 4) * 1.5625;
@@ -255,7 +255,7 @@ namespace InputToTxt
                         double channel8_O2 = ((data[7] / 249) * 1000 - 4) * 1.5625;
 
                         string strChannel1WaterColumn = channel1WaterColumn.ToString("0.000");
-                        string strChannel2_ppmCO2 = channel1WaterColumn.ToString("0.000");
+                        string strChannel2_ppmCO2 = channel2_ppmCO2.ToString("0.000");
                         string strChannel3_O2 = channel3_O2.ToString("0.000");
                         string strChannel4_O2 = channel4_O2.ToString("0.000");
                         string strChannel5_O2 = channel5_O2.ToString("0.000");
